@@ -1,0 +1,48 @@
+/* Listar Archivos */
+ls           
+ls -l       # Listar archivos
+ls -al      # Incluye archivos ocultos
+
+/* Movimiento en Directorios */
+pwd         # Identificar directorio actual
+cd          # Cambiar de directorio
+mkdir       # Crear un directorio
+
+/* Operaciones sobre Archivos */
+cp          # Copiar un archivo
+rm          # Borrar un archivo:
+mv          # Mover un archivo:
+rmdir       # Borrar un directorio
+
+/* Edicion de archivos VIM */
+vim archivo # 
+i           # modo insertar texto
+esc         # salir del modo Edicion
+:           # activa el modo de comandos
+:w          # guardar cambios
+:x          # grabar y salir
+:q          # salir del vim
+
+/* Edicion de archivos NANO */
+nano archivo    # entra en modo edicion
+^X          # Sale del modo NANO
+
+/* Ver Contenido */
+cat archivo             # ver el contenido de un archivo
+head archivo            # muestra las primeras lineas de un archivo
+head -n 5 archivos      # muestra las 5 primeras lineas de un archivo
+
+/* Busqueda por expresiones regulares */
+grep regExp archivo     # busca la expresion en el archivo
+grep -i regExp archivo  # busqueda insensible a mayusculas o minusculas
+grep -i regExp$ archivo # busqueda archivos que terminen en regExp
+
+/* Tratamiento de flujos */
+sed 's/regExp1/regExp2/g' archivo # Reemplaza regExp1 por regExp2 a lo largo de todo el flujo (g:global). No modifica el archivo original
+sed '$d' archivo # elimina la ultima linea del archivo
+
+/* Tratamiento de texto delimitado */
+awk -F 'delimitador' '{print $1}' archivo # imprime la primera columna
+
+
+
